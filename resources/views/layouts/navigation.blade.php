@@ -18,7 +18,7 @@
                     </x-nav-link>
 
                     <!-- Tambahan Menu -->
-                    <x-nav-link href="/mahasiswa" :active="request()->is('mahasiswa*')">
+                    <x-nav-link :href="route('mahasiswa.index')" :active="request()->routeIs('mahasiswa.*')">
                         {{ __('Daftar Mahasiswa') }}
                     </x-nav-link>
 
@@ -88,9 +88,9 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-nav-link href="/mahasiswa" :active="request()->is('mahasiswa*')">
+            <x-responsive-nav-link :href="route('mahasiswa.index')" :active="request()->routeIs('mahasiswa.*')">
                 {{ __('Daftar Mahasiswa') }}
-            </x-nav-link>
+            </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('prodi.index')" :active="request()->routeIs('prodi.*')">
                 {{ __('Daftar Program Studi') }}
             </x-responsive-nav-link>
